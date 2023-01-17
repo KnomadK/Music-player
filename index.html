@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kha Vo Music Player</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/590a7be6d1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="player">
+      <div class="dashboard">
+        <header>
+          <h4>Now Playing:</h4>
+          <h2>String</h2>
+        </header>
+        <div class="cd">
+          <div
+            class="cd-thumb"
+            style="
+              background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+            "
+          ></div>
+        </div>
+        <!-- Control -->
+        <div class="control">
+          <div class="btn btn-repeat">
+            <i class="fas fa-redo"></i>
+          </div>
+          <div class="btn btn-prev">
+            <i class="fas fa-step-backward"></i>
+          </div>
+          <div class="btn btn-toggle-play">
+            <i class="fas fa-pause icon-pause"></i>
+            <i class="fas fa-play icon-play"></i>
+          </div>
+          <div class="btn btn-next">
+            <i class="fas fa-step-forward"></i>
+          </div>
+          <div class="btn btn-random">
+            <i class="fas fa-random"></i>
+          </div>
+        </div>
+
+        <div class="progress">
+          <!-- <input type="range" class="progress-bar"></input> -->
+          <input
+            class="progress-bar"
+            type="range"
+            value="0"
+            step="1"
+            min="0"
+            max="100"
+          />
+        </div>
+        <span class="current-time"></span>
+        <span class="duration-time"></span>
+        <div class="volume-btn">
+          <i class="fa-solid fa-volume-high volume-on"></i>
+          <i class="fa-solid fa-volume-xmark volume-mute hide"></i>
+          <input
+            class="volume-input"
+            type="range"
+            value="100"
+            step="1"
+            min="0"
+            max="100"
+          />
+        </div>
+        <audio id="audio" src=""></audio>
+      </div>
+      <div class="playlist"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
